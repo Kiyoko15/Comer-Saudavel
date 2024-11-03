@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #ca0505d5;
+    --secondary-color: #dcdbdbe8;
+    --secondary-colorPink: #b32424b7;
+    --secondary-colorwhite: white;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+h1,h2, h3 h4, h5, h6{
+    color: var(--primary-color);
+    text-shadow: 3px 2px 2px var(--secondary-color);
+}
+
+.header{
+    flex: 0 0 25rem;
+    background-color: #db6060;
+    position: relative;
+}
+
+.header-pages{
+    padding: 3em 4em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-pages li{
+    list-style-type: none;
+    border-bottom: 2px solid rgba(49, 49, 49, 0.459);
+}
+
+.header-pages a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 4rem;
+    width: 16rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    border-radius: 4px;
+    padding: .5rem;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.header-pages a:hover, .header-pages a:focus{
+    background-color: #6b6666;
+    padding: .3rem;
+}
+
+
+.main{
+    flex: 1 0;
+    background-image: url(pexels-marceloverfe-14498967.jpg);
+    background-size: cover;
+    font-size: 1.8rem;
+    padding: 2em;
+}
+
+h1{
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 6rem;
+}
+
+.second-title{
+    font-size: 3.5rem;
+    margin-bottom: 1.4rem;
+    margin-top: 2rem;
+}
+
+.main-content, .contact-address{
+    background-color: var(--secondary-colorPink);
+    border-radius: 5px;
+    box-shadow: 0 0 9px rgba(253, 252, 251, 0.858);
+
+}
+.main-content p{
+    color: var(--secondary-colorwhite);
+    line-height: 1.2;
+    margin: .01rem 0 .1rem;
+    font-size: 1.9rem;
+    letter-spacing: .1rem;
+    padding: 2em;
+}
+
+.contact-address{
+    color: var(--secondary-colorwhite);
+    padding: 1.4rem;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-address, li{
+    list-style-type: none;
+}
+
+.contact-address ul{
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+}
+.contact-address a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+
+.contact-web{
+    font-weight: normal;
+    color: var(--secondary-colorwhite);
+    text-shadow: none;
+    font-family: sans-serif;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.form{
+    color: black;
+    margin-top: 4rem;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+}
+
+.form-rowTitle__label{
+    margin-top: 1.2rem;
+}
+.form-rowTitle{
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-rowTitle__input{
+    padding: .4em 0;
+    font-size: 1.2rem;
+    transition: padding-left 1.4s;
+    outline: none;
+    border-radius: 4px;
+}
+
+.form-rowTitle__input:focus, .form-rowTitle__input:hover{
+    padding-left: .8rem;
+}
+
+.submit{
+    display: flex;
+    gap: 1em;
+    flex: 1;
+    margin-top: 2rem;
+}
+
+.btn{
+    padding: .8rem;
+}
+
+.btn:focus, .btn:hover{
+    background-color: var(--secondary-colorPink);
+    border-radius: 4px;
+}
+
+.submit a{
+    color: var( --secondary-colorwhite);
+    text-decoration: none;
+}
