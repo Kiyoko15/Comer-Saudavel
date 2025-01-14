@@ -4,7 +4,7 @@
 }
 
 :root{
-    --primary-color: #ca0505d5;
+    --primary-color: #ee1616bf;
     --secondary-color: #dcdbdbe8;
     --secondary-colorPink: #b32424b7;
     --secondary-colorwhite: white;
@@ -27,7 +27,8 @@ h1,h2, h3 h4, h5, h6{
 
 .header{
     flex: 0 0 25rem;
-    background-color: #db6060;
+    background-color: #e63e3ed8;
+    /* background-image:linear-gradient(rgb(202, 71, 11)); */
     position: relative;
 }
 
@@ -56,20 +57,20 @@ h1,h2, h3 h4, h5, h6{
     text-transform: uppercase;
     color: #f0f0f0;
     border-radius: 4px;
-    padding: .5rem;
+    padding: .4rem 0;
     background-color: transparent;
-    transition: all .5s;
+    transition: padding-right .5s, background-color .4s;
 }
 
 .header-pages a:hover, .header-pages a:focus{
     background-color: #6b6666;
-    padding: .3rem;
+    padding-left: .6rem;
 }
 
 
 .main{
     flex: 1 0;
-    background-image: url(pexels-marceloverfe-14498967.jpg);
+    background-image: radial-gradient(rgba(233, 137, 12, 0.901), rgba(255, 109, 18, 0.703));
     background-size: cover;
     font-size: 1.8rem;
     padding: 2em;
@@ -173,12 +174,12 @@ h1{
 .submit{
     display: flex;
     gap: 1em;
-    flex: 1;
     margin-top: 2rem;
+    justify-content: space-between;
 }
 
 .btn{
-    padding: .8rem;
+    padding: 0 1.8rem 0;
 }
 
 .btn:focus, .btn:hover{
@@ -187,6 +188,21 @@ h1{
 }
 
 .submit a{
-    color: var( --secondary-colorwhite);
-    text-decoration: none;
+    color: rgb(0, 56, 161);
+    padding: 1rem;
+    background-color: transparent;
 }
+
+.submit a:focus, .submit a:hover{
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.submit-own{
+    display: flex;
+    gap: 1.4em;
+}
+.submit-own a, .submit-aside{
+    font-weight: 600;
+}
+
