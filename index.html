@@ -6,20 +6,22 @@
     <title>Comer Saudável</title>
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/brands.css">
-    <link rel="stylesheet" href="noramalize.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="comersaudavel.css">
 </head>
 <body>
     <header class="header">
-        <ul class="header-pages">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="receitas-fit.html">Receitas Fit</a></li>
-            <li><a href="airfryer.html">Airfryer</a></li>
-            <li><a href="italiano.html">Italiano</a></li>
-            <li><a href="japonesa.html">Japonesa</a></li>
-            <li><a href="especiais.html">Especiais</a></li>
-            <li><a href="livros.html">Livros</a></li>
-        </ul>
+        <nav>
+            <ul class="header-pages">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="receitas-fit.html">Receitas Fit</a></li>
+                <li><a href="airfryer.html">Airfryer</a></li>
+                <li><a href="italiano.html">Italiano</a></li>
+                <li><a href="japonesa.html">Japonesa</a></li>
+                <li><a href="especiais.html">Especiais</a></li>
+                <li><a href="livros.html">Livros</a></li>
+            </ul>
+        </nav>
     </header> 
     
     <main class="main">
@@ -28,10 +30,43 @@
             Comer saudável
         </h1>
         <article class="main-content">
-            <p>Você que tem uma vida corrida e não tem tempo para penssar em um cardápio saudável.</p>
-            <p>Você que é mãe e trabalha fora de casa e ainda tem que penssar no que fazer para a família comer de forma saudável.</p>
-            <p>Não se estressem mais nossa equipe te ajudará a montar cadápios diários, de forma saudável e super deliciosa.</p>
+            <div class="main-content__alert">
+                <p>Você que tem uma vida corrida e não tem tempo para penssar em um cardápio saudável.</p>
+                <img src="main-picture/mom-thinking1.jpg" alt="Temos uma mulher de cabelos curtos, morena usando um avental de cozinheira, segurando na sintura e com uma feição de bem pensativa, ela está olhando para a sua bancada branca que tem uma taba de carne com um prato em cima e alguns camarões dentro do prato, ao lado deste prato há um garfo e uma faca e ao lado desses, há outro prato com verduras cortadas, à frente da taba de carne há varia verduras e a metade da bancada da mulher tem um fogão de indução. Ao fundo é possível ver uma cozinha branca com alguns aparelhos domésticos">
+            </div>
+
+            <div class="main-content__alert">
+                <p>Você que é mãe e trabalha fora de casa e ainda tem que penssar no que fazer para a família comer de forma saudável.</p>
+                <img src="main-picture/tired-mom1.jpg" alt="Uma mulher loira de cabelos curtos usando um avental de cozinheira segurando a cabeça com a mão direita como se estivesse muito cansada, a mulher está sentada sobre uma bancada de madeira cheia de verduras e frutas">
+            </div>
+
+            <div class="main-content__alert">
+                <p>Não se estressem mais nossa equipe te ajudará a montar cadápios diários, de forma saudável e super deliciosa.</p>
+                <img src="main-picture/cooking-group1.jpg" alt="Dois homens vestindo uniformes de cozinheiro, o mais a frente da foto é negro e o mais ao fundo da foto é um homem branco, ambos estão em uma cozinha  de restaurante preparando vários pratos diferentes, e a bancada onde eles estão preparando a refeição está com pimentão, pão e vários tipos de de grãos">
+            </div>
+            
+            
         </article>
+
+        <form action="#" method="get" autocomplete="off" class="form">
+            <div class="form-row">
+                <legend class="form-rowTitle second-title">Login</legend>
+
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="usuário" required class="form-rowTitle__input">
+
+                <label for="password" class="form-rowTitle__label">Senha</label>
+                <input type="text" id="password" name="password" class="form-rowTitle__input">
+            </div>
+            <div class="submit">
+                <input type="submit" value="login" class="btn">
+                <div class="submit-own">
+                    <a href="cadastro.html">Cadastre-se</a>
+                    <a href="#" class="submit-aside">Esqueci a minha senha</a>
+                </div>
+                <!-- submit aside -->
+            </div>
+        </form>
 
         <h2 class="second-title">Contato</h2>
         <address class="contact-address">
@@ -44,31 +79,12 @@
             <div>
                 <h3 class="contact-web">Redes sociais:</h3>
                 <p>
-                    <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
-                    <a href="#"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></i>Linkedin</a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></i> Linkedin</a>
                 </p>
             </div>
         </address>
-
-        <form action="#" method="get" autocomplete="off" class="form">
-            <div class="form-row">
-                <legend class="form-rowTitle">Login</legend>
-
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="usuário" required class="form-rowTitle__input">
-
-                <label for="password" class="form-rowTitle__label">Senha</label>
-                <input type="text" id="password" name="password" class="form-rowTitle__input">
-            </div>
-            <div class="submit">
-                <div class="submit-own">
-                    <input type="submit" value="login" class="btn">
-                    <a href="cadastro.html">Cadastre-se</a>
-                </div>
-                <a href="#" class="submit-aside">Esqueci a minha senha</a>
-            </div>
-        </form>
     </main>
 </body>
 </html>

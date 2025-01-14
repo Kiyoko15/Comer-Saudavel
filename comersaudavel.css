@@ -1,13 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
-    --primary-color: #ee1616bf;
-    --secondary-color: #dcdbdbe8;
-    --secondary-colorPink: #b32424b7;
-    --secondary-colorwhite: white;
+    --primary-color: #327b6a;
+    --secondary-color: #08a38eff;
+    --secondary-green-blue: #24e5d296;
+    --dark-green: rgb(6, 31, 47);
+    --body-color: rgb(138, 242, 93);
+    --galeryBack--color: rgba(231, 251, 170, 0.852);
 }
 
 html{
@@ -19,17 +22,15 @@ body{
     font-family: sans-serif;
     min-height: 100vh;
 }
-
-h1,h2, h3 h4, h5, h6{
+ /* formatação de h1, h2, h3 */
+.main-title,.second-title, .contact-web{
     color: var(--primary-color);
-    text-shadow: 3px 2px 2px var(--secondary-color);
+    text-shadow: 0 .14em  .09em var(--secondary-color);
 }
 
 .header{
     flex: 0 0 25rem;
-    background-color: #e63e3ed8;
-    /* background-image:linear-gradient(rgb(202, 71, 11)); */
-    position: relative;
+    background-color: #0db751be;
 }
 
 .header-pages{
@@ -48,7 +49,7 @@ h1,h2, h3 h4, h5, h6{
 }
 
 .header-pages a{
-    display: inline-block;
+    display: block;
     text-decoration: none;
     font-size: 2rem;
     margin-top: 4rem;
@@ -58,57 +59,76 @@ h1,h2, h3 h4, h5, h6{
     color: #f0f0f0;
     border-radius: 4px;
     padding: .4rem 0;
-    background-color: transparent;
     transition: padding-right .5s, background-color .4s;
 }
 
 .header-pages a:hover, .header-pages a:focus{
     background-color: #6b6666;
-    padding-left: .6rem;
+    padding-right: .6rem;
 }
 
 
 .main{
     flex: 1 0;
-    background-image: radial-gradient(rgba(233, 137, 12, 0.901), rgba(255, 109, 18, 0.703));
-    background-size: cover;
+    background-color: var(--body-color);
     font-size: 1.8rem;
     padding: 2em;
 }
 
-h1{
+.main-title{
     text-align: center;
     font-size: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 9rem;
 }
 
 .second-title{
     font-size: 3.5rem;
     margin-bottom: 1.4rem;
-    margin-top: 2rem;
+    margin-top: 6rem;
+    /* padding-left: .6em; */
 }
 
 .main-content, .contact-address{
-    background-color: var(--secondary-colorPink);
-    border-radius: 5px;
-    box-shadow: 0 0 9px rgba(253, 252, 251, 0.858);
-
+    background-color: var(--secondary-green-blue);
+    border-radius: 8px;
+    
+    
+    
 }
-.main-content p{
-    color: var(--secondary-colorwhite);
+
+.main-content__alert{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: .5em;
+    align-items: center;
+}
+
+.main-content__alert img{
+    width: 37.8rem;
+    height: 25.8rem;
+    border-radius: 8px;
+    padding: .5em;
+}
+.main-content__alert p{
+    color: var(--dark-green);
     line-height: 1.2;
-    margin: .01rem 0 .1rem;
     font-size: 1.9rem;
     letter-spacing: .1rem;
-    padding: 2em;
+    padding: 0 .6em 0 .6em;
+   
+}
+
+.main-content__alert p + p{
+    margin: 2rem 0 0;
 }
 
 .contact-address{
-    color: var(--secondary-colorwhite);
-    padding: 1.4rem;
+    color: var(--dark-green);
+    padding: 2em;
     line-height: 1.6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .contact-address, li{
@@ -130,7 +150,7 @@ h1{
 
 .contact-web{
     font-weight: normal;
-    color: var(--secondary-colorwhite);
+    color: var(--dark-green);
     text-shadow: none;
     font-family: sans-serif;
 }
@@ -148,7 +168,9 @@ h1{
 .form-row{
     display: flex;
     flex-direction: column;
-    width: 36%;
+
+    width: 21em;
+   
 }
 
 .form-rowTitle__label{
@@ -171,19 +193,30 @@ h1{
     padding-left: .8rem;
 }
 
+.submit-own{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1em; */
+     margin-top: 1.6rem;
+    /*justify-content: space-between; */
+}
+
 .submit{
     display: flex;
-    gap: 1em;
-    margin-top: 2rem;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
 }
 
 .btn{
-    padding: 0 1.8rem 0;
+    padding: .8em 1.8rem;
+    
 }
 
 .btn:focus, .btn:hover{
-    background-color: var(--secondary-colorPink);
+    background-color: var(--secondary-green-blue);
     border-radius: 4px;
 }
 
@@ -206,3 +239,74 @@ h1{
     font-weight: 600;
 }
 
+/* Formatação das outras páginas */
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    color: var(--dark-green);
+}
+
+.container-recipe img{
+    width: 20rem; 
+    height: 20rem;
+    display: block;
+    margin: 2rem 0 4rem;
+}
+
+.container-recipe__ingredient li, .container-recipe__topping li{
+    list-style-type: square;
+    margin-bottom: 1rem;
+    list-style-position: inside;
+}
+
+.container-recipe h3{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: var(--dark-green);
+}
+
+.container-recipe__ingredientMix, .container-recipe__toppingMix{
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.container-galery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 76rem;
+    margin: auto;
+    background-color: var(--primary-color);
+    padding: 1.6rem;
+    gap: 1.4rem;
+    margin-top: 2rem;
+    border-radius: .5rem;
+}
+.card{
+    flex-basis: 25rem;
+    flex-grow: 1;
+}
+
+.card img{
+    width: 100%;
+    display: block;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.container-galery h3{
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    background-color: var(--galeryBack--color);
+    padding: 2rem;
+    border-radius: 0 0 .5rem .5rem;
+}
+
+
+
+.contaner-boxTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
